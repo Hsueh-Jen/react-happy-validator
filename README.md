@@ -1,5 +1,4 @@
 # react-validator
----
 
 專案中的validator.js是參考[jquery-validation](https://github.com/jquery-validation/jquery-validation)的結構來設計，讓我們可以在每個index.js中引用，加速程式開發，而且能更方便管理驗證程序。
 
