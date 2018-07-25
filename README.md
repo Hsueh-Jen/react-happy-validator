@@ -1,5 +1,5 @@
 # react-validator
-===
+---
 
 專案中的validator.js是參考[jquery-validation](https://github.com/jquery-validation/jquery-validation)的結構來設計，讓我們可以在每個index.js中引用，加速程式開發，而且能更方便管理驗證程序。
 
@@ -9,12 +9,12 @@
 
 先引用
 
-```javascript=
+```javascript
 import Validator from 'utils/validator';
 ```
 
 在constructor中建立validator，填上我們的規範，客製化的error message以及error message該回傳到哪個state欄位，好讓errorText可以完整呈現。
-```javascript=
+```javascript
 // 宣告Validator並且填入rules與messages
 this.validator = new Validator(this, {
   rules: {
@@ -67,7 +67,7 @@ active代表開啟驗證模式，因為在欄位的onChange事件上，使用者
 * `activateValidator()` - 通常用在onBlur事件，當欄位被填寫後，游標離開該欄位的時候，將欄位的active設為true，並且馬上驗證，但其中的特例是，如果使用者跳離欄位時，欄位是空值，代表使用者還不打算填寫該欄位，這個時候就不會去觸發上述的事件了。
 
 使用情境大致如下：
-```jsx=
+```jsx
 <TextField
     value={this.state.nickname}
     onChange={() => { this.validator.validateWhenActive('nickname'); }}
@@ -86,7 +86,7 @@ active代表開啟驗證模式，因為在欄位的onChange事件上，使用者
 因為3個function帶入參數的規格是一樣的，所以這邊以`validate()`為例。
 
 validate()即是拿來驗證的function，我們使用下方建立的驗證規則進行驗證，在`new Validator()`中第一個填入的參數是整個component，因為validator會使用this.state，所以必須傳入this，第二個參數就是驗證規範的rules與messages。
-```javascript=
+```javascript
 this.validator = new Validator(this, {
   rules: {
     name: { required: true, errorState: 'nameError' },
@@ -108,25 +108,25 @@ this.validator = new Validator(this, {
 
 validate()使用時如果沒帶入參數，那就會驗證validator中所有的規則。
 
-```javascript=
+```javascript
 const errors = this.validator.validate();
 ```
 也能帶入參數指定要驗證哪一些欄位。
-```javascript=
+```javascript
 const errors = this.validator.validate('name');
 const otherErrors = this.validator.validate('name','web');
 ```
 
 如果沒有錯誤的話會回傳null，有錯誤的話則會回傳哪個欄位的哪個規則錯誤，假如說name的欄位留空，而web欄位輸入`ThisIsTest`，account輸入`test@gmail.com`，然後執行`this.validator.validate();`，回傳的errors格式如下：
 
-```json=
+```json
 {
     name: "required",
     web: "url",
 }
 ```
 這代表我們只要用errors來判斷是否要繼續執行程式
-```javascript=
+```javascript
 const errors = this.validator.validate();
 if (errors) return;
 ```
@@ -140,7 +140,7 @@ rules: {
 
 每個rule都有對應一個預設的message，message能對應i18n模組(尚未開發)，所以可以不填message，如果想客製化message就在`messages`中對應的欄位與規則上填入error message，如下：
 
-```javascript=
+```javascript
 this.validator = new Validator(this, {
   rules: {
     web: { required: true, url: true, errorState: 'webError' },
@@ -156,7 +156,7 @@ this.validator = new Validator(this, {
 有時候會在validator已經宣告後的某些狀況下更改驗證規則，這時候可以使用setConfig()，填入的rules與messages格式跟宣告時一樣，唯一要注意的是如果想要刪除某個rule或message，就帶入同樣的欄位並在值的地方填上`"delete"`，就可以移除該欄位。
 
 使用範例如下：
-```javascript=
+```javascript
 this.validator.setConfig({
     rules: {
         web: {
@@ -165,5 +165,4 @@ this.validator.setConfig({
         },
     },
 });
-
 ```
