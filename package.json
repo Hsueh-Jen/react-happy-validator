@@ -1,0 +1,23 @@
+{
+  "name": "react-validator",
+  "version": "0.0.0",
+  "description": "The react verision validator is refer to jquery-validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hsueh-Jen/react-validator.git"
+  },
+  "keywords": [
+    "react",
+    "validation"
+  ],
+  "author": "Hsueh-Jen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hsueh-Jen/react-validator/issues"
+  },
+  "homepage": "https://github.com/Hsueh-Jen/react-validator#readme"
+}
