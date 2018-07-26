@@ -1,5 +1,5 @@
 {
-  "name": "react-validator",
+  "name": "react-state-validator",
   "version": "0.0.0",
   "description": "The react verision validator is refer to jquery-validation",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hsueh-Jen/react-validator.git"
+    "url": "git+https://github.com/Hsueh-Jen/react-state-validator.git"
   },
   "keywords": [
     "react",
@@ -17,7 +17,7 @@
   "author": "Hsueh-Jen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hsueh-Jen/react-validator/issues"
+    "url": "https://github.com/Hsueh-Jen/react-state-validator/issues"
   },
-  "homepage": "https://github.com/Hsueh-Jen/react-validator#readme"
+  "homepage": "https://github.com/Hsueh-Jen/react-state-validator#readme",
 }
