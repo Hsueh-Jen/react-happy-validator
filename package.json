@@ -20,4 +20,7 @@
     "url": "https://github.com/Hsueh-Jen/react-state-validator/issues"
   },
   "homepage": "https://github.com/Hsueh-Jen/react-state-validator#readme",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
 }
