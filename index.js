@@ -20,7 +20,6 @@ const defaultMessage = {
   max: 'Please enter a value less than or equal to {0}.',
   range: 'Please enter a value between {0} and {1}.',
   integer: 'Please enter a integer.',
-  password: 'Please enter 8 to 32 characters with a mix of letters, numbers',
   phone: 'Please enter phone number',
   or: "You didn't match any format",
   uuid: 'Please enter a valid UUID',
@@ -126,12 +125,6 @@ export default function validator(parent, config) {
 
       case 'uuid':
         if (!isUUID(fieldValue) && ruleValue === true) {
-          return false;
-        }
-        break;
-
-      case 'password':
-        if (!isPassword(fieldValue) && ruleValue === true) {
           return false;
         }
         break;
