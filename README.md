@@ -1,6 +1,6 @@
 # react-happy-validator
 
-You can check this project on [github](https://github.com/Hsueh-Jen/react-happy-validator)
+You can check this project on [github](https://github.com/Hsueh-Jen/react-happy-validator)
 
 專案中的 index.js 是參考[jquery-validation](https://github.com/jquery-validation/jquery-validation)的結構來設計，讓我們可以在每個 index.js 中引用，加速程式開發，而且能更方便管理驗證程序。
 
