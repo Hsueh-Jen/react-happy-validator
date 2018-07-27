@@ -1,6 +1,6 @@
-# react-happy-validator
+# react-happy-validator
 
-You can check this project on [github](https://github.com/Hsueh-Jen/react-happy-validator)
+You can check this project on [github](https://github.com/Hsueh-Jen/react-happy-validator)
 
 You can check live demo [here](https://stackblitz.com/edit/react-happy-validator-sample)
 
