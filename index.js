@@ -4,7 +4,7 @@
  *
  */
 
-import { isURL, isPhone, isEmail, isUUID } from 'tools';
+import { isURL, isPhone, isEmail, isUUID } from './tools';
 import _ from 'lodash';
 
 // TODO: default message can be replaced by other language(i18n) in the future
