@@ -47,6 +47,8 @@ this.validator = new Validator(this, {
 | min         | 數字                       | 數字最小值限制，輸入欄位是數字                                                                                                      |
 | max         | 數字                       | 數字最大值限制，輸入欄位是數字                                                                                                      |
 | range       | [ 數字, 數字 ]             | 數字大小區間限制，輸入欄位是數字                                                                                                    |
+| minDate     | state 名稱 / Date()        | 日期最小值限制，可以輸入 state 名稱或直接輸入 Date 行型態的資料                                                                     |
+| maxDate     | state 名稱 / Date()        | 日期最大值限制，可以輸入 state 名稱或直接輸入 Date 行型態的資料                                                                     |
 | integer     | true                       | 必須是整數                                                                                                                          |
 | phone       | true                       | 須符合電話號碼格式                                                                                                                  |
 | or          | JSON Object                | or 中可已填入別的 rule 規範，只要其中一項符合即可通過驗證                                                                           |

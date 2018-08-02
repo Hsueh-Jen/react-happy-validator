@@ -24,6 +24,9 @@ const defaultMessage = {
   or: "You didn't match any format",
   uuid: 'Please enter a valid UUID',
   pattern: 'Please enter a valid data',
+  minDate: 'Date is invalid',
+  maxDate: 'Date is invalid',
+
   // remote: 'Please fix this field.',
   // date: 'Please enter a valid date.',
   // dateISO: 'Please enter a valid date (ISO).',
@@ -164,6 +167,26 @@ export default function validator(parent, config) {
 
       case 'rangeLength':
         if (fieldValue.length < ruleValue[0] || fieldValue.length > ruleValue[1]) {
+          return false;
+        }
+        break;
+
+      case 'minDate':
+        if (_.isString(ruleValue)) {
+          if (fieldValue < parent.state[ruleValue]) {
+            return false;
+          }
+        } else if (fieldValue < ruleValue) {
+          return false;
+        }
+        break;
+
+      case 'maxDate':
+        if (_.isString(ruleValue)) {
+          if (fieldValue > parent.state[ruleValue]) {
+            return false;
+          }
+        } else if (fieldValue > ruleValue) {
           return false;
         }
         break;
