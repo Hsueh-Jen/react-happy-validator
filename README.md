@@ -4,7 +4,7 @@
 
 You can check [github](https://github.com/Hsueh-Jen/react-happy-validator), [npm](https://www.npmjs.com/package/react-happy-validator) and [live demo](https://stackblitz.com/edit/react-happy-validator-sample)
 
-專案中的 index.js 是參考[jquery-validation](https://github.com/jquery-validation/jquery-validation)的結構來設計，讓我們可以在每個 index.js 中引用，加速程式開發，而且能更方便管理驗證程序。
+專案中的 index.js 是參考[jquery-validation](https://github.com/jquery-validation/jquery-validation)的結構來設計，讓我們可以在每個 index.js 中引用，加速程式開發，而且能更方便管理驗證程序。後來網友也推薦了[Joi](https://github.com/hapijs/joi)這個套件，看起來也蠻不錯的，有時間可以研究看看。
 
 # **_How_** to use Validator
 
