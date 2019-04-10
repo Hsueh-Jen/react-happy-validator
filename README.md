@@ -13,7 +13,7 @@ You can check [github](https://github.com/Hsueh-Jen/react-happy-validator), [npm
 先引用
 
 ```javascript
-import Validator from 'react-happy-validator';
+import Validator from 'react-happy-validator';
 ```
 
 在 constructor 中建立 validator，填上我們的規範，客製化的 error message 以及 error message 該回傳到哪個 state 欄位，好讓 errorText 可以完整呈現。
